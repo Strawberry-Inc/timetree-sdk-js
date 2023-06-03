@@ -112,7 +112,7 @@ export class CalendarAppClient {
   }
 
   public async updateEvent(updateEventForm: UpdateEventForm) {
-    return this.api.put<Event>(`/calendar/events`, updateEventForm);
+    return this.api.put<Event>(`/calendar/events/${updateEventForm.eventId}`, updateEventForm);
   }
 
   public async deleteEvent({ eventId }: DeleteEventParams) {
