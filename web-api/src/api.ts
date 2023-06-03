@@ -6,7 +6,7 @@ import axios, {
   AxiosError,
   AxiosTransformer,
 } from "axios";
-import asyncRetroy from "async-retry";
+import asyncRetry from "async-retry";
 import qs from "qs";
 import humps from "humps";
 import { deserialise, serialise, camel } from "kitsu-core";
@@ -129,7 +129,7 @@ export class APIClient {
     type Params = Parameters<Request>;
 
     return (...params: Params) =>
-      asyncRetroy<Promise<AxiosResponse<object>>>(
+      asyncRetry<Promise<AxiosResponse<object>>>(
         async (bail) => {
           try {
             const result = await fn(...params);

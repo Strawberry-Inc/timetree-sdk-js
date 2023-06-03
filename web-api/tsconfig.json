@@ -5,14 +5,12 @@
     "module": "commonjs",
     "lib": ["esnext", "dom"],
     "outDir": "dist",
-
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
-
     "baseUrl": "./src",
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -23,6 +21,7 @@
     ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }
